@@ -31,7 +31,7 @@ pipeline {
             steps {
                 configFileProvider([configFile(fileId: '0ee7a9ad-59fd-4d2c-af45-3033f5efd747', variable: 'MAVEN_SETTINGS')]) {
                     sh '''
-                    mvn deploy -s $MAVEN_SETTINGS
+                    mvn deploy -s '$MAVEN_SETTINGS'
                     '''
                 }
             }
