@@ -8,7 +8,7 @@ pipeline {
                         $class           : 'GitSCM',
                         branches         : [[name: '*/main']],
                         userRemoteConfigs: [[
-                                                    url          : "https://github.com/devops5014/sample-webapp.git",
+                                                    url          : "https://github.com/Rajasekharbcr/sample-webapp.git",
                                                     credentialsId: "github_token"
                                             ]]
                 ])
@@ -30,7 +30,7 @@ pipeline {
         }
         stage("Deploy To Artifactory") {
             steps {
-                configFileProvider([configFile(fileId: '9cc24c1c-d371-4385-a759-ded9eb7dae45', variable: 'MAVEN_SETTINGS')]) {
+                configFileProvider([configFile(fileId: '0ee7a9ad-59fd-4d2c-af45-3033f5efd747', variable: 'MAVEN_SETTINGS')]) {
                     sh '''
                     mvn deploy -s $MAVEN_SETTINGS
                     '''
