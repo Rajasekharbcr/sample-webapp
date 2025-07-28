@@ -51,6 +51,7 @@ pipeline {
                     sh '''
                         aws ecr get-login-password --region us-east-1 | docker login --username AWS --password-stdin 740127659061.dkr.ecr.us-east-1.amazonaws.com
                         docker tag sample-webapp:latest 740127659061.dkr.ecr.us-east-1.amazonaws.com/sample-webapp:latest
+                        docker build -t sample-webapp .
                         docker push 740127659061.dkr.ecr.us-east-1.amazonaws.com/sample-webapp:latest
                        '''
 
