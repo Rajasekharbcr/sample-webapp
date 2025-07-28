@@ -5,7 +5,7 @@
 
     <groupId>com.example</groupId>
     <artifactId>sample-webapp</artifactId>
-    <version>1.5-SNAPSHOT</version>
+    <version>1.6-SNAPSHOT</version>
     <packaging>war</packaging>
 
     <name>Sample Web Application</name>
@@ -47,7 +47,7 @@
         <snapshotRepository>
             <id>snapshots</id>
             <name>sample-webapp</name>
-            <url>http://54.172.197.196:8081/artifactory/libs-snapshot</url>
+            <url>http://44.202.56.217:8081/artifactory/libs-snapshot</url>
         </snapshotRepository>
     </distributionManagement>
 
